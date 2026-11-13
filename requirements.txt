@@ -1,0 +1,19 @@
+
+# Manipulación y análisis de datos
+pandas
+numpy
+openpyxl
+
+# Machine Learning
+scikit-learn
+xgboost
+joblib
+
+# Aplicación web y visualización
+streamlit
+plotly
+
+# Conexión a bases de datos
+PyMySQL
+SQLAlchemy
+python-dotenv
