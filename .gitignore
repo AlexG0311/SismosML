@@ -1,36 +1,34 @@
-
-# Variables de entorno y credenciales
+# Credenciales
 .env
 .env.*
 !.env.example
 
-# Entornos virtuales
+# Entorno virtual
 .venv/
 venv/
 
-# Caché de Python
+# Python
 __pycache__/
 *.py[cod]
 
-# Caché y archivos de pruebas
+# Pruebas y caché
 .pytest_cache/
 .coverage
-htmlcov/
 
-# Datos locales
+# Datos originales y procesados
 data/raw/
 data/processed/
 *.csv
 
-# Modelos generados
-modelos/*.joblib
-modelos/*.pkl
+# Archivos temporales de modelos
+modelos/temporales/
+modelos/checkpoints/
 
-# Configuración local de editores
+# Editores
 .vscode/
 .idea/
 
-# Archivos temporales
+# Otros
 *.log
 .DS_Store
 Thumbs.db
