@@ -1,10 +1,13 @@
-
 import os
+
 import pymysql
 import streamlit as st
+
 from dotenv import load_dotenv
 
+
 load_dotenv()
+
 
 def obtener_conexion():
     return pymysql.connect(
@@ -19,13 +22,15 @@ def obtener_conexion():
         write_timeout=60
     )
 
+
 @st.cache_data(ttl=300)
 def consultar_datos():
     conexion = obtener_conexion()
 
     try:
         with conexion.cursor() as cursor:
-            cursor.execute("""
+            cursor.execute(
+                """
                 SELECT
                     id,
                     magnitude,
@@ -37,7 +42,8 @@ def consultar_datos():
                     utc_time,
                     agency
                 FROM sismos
-            """)
+                """
+            )
 
             resultados = cursor.fetchall()
 
